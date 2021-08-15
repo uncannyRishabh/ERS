@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    tools:context=".enrollActivity"
+    >
+
+    <RelativeLayout
+        app:theme="@style/Theme.MaterialComponents"
+        android:id="@+id/viewgrp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.sergivonavi.materialbanner.Banner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:buttonLeftText="Dismiss"
+            app:buttonRightText="Redirect"
+            android:layout_alignParentTop="true"
+            app:messageText="You have enrolled for this exam. To edit exam form press redirect."
+            android:elevation="5dp"
+            app:messageTextColor="@color/dayNightTextPrimary"
+            app:buttonsTextColor="@color/dayNightTextSecondary"
+            app:backgroundColor="@color/dayNightBG"
+            />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardView_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="84dp"
+            app:cardCornerRadius="6dp"
+            android:layout_marginHorizontal="20dp"
+            android:backgroundTint="#E5D8FB"
+            app:cardElevation="4dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="6dp"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="40dp"
+                    android:scaleX="1.3"
+                    android:scaleY="1.3"
+                    android:src="@drawable/exam_info" />
+
+                <TextView
+                    android:id="@+id/exam_heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="12dp"
+                    android:paddingStart="46dp"
+                    android:paddingEnd="35dp"
+                    android:text="@string/some_private_exam_2021"
+                    android:textColor="#6200EE"
+                    android:textSize="28sp"
+
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/arrow_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="12dp"
+                android:paddingVertical="36dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingHorizontal="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_down"
+
+                />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/arrow_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="12dp"
+                    android:paddingVertical="36dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingHorizontal="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/arrow_up"
+                    android:visibility="invisible"
+                    />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/exam_heading"
+                    android:layout_marginBottom="16dp"
+                    >
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="18dp"
+                        app:chipBackgroundColor="#D3A8ED"
+                        android:textColor="@color/purple_500"
+                        android:text="@string/last_date"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp"
+                        android:clickable="false"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="10dp"
+                        app:chipBackgroundColor="#D3A8ED"
+                        android:textColor="@color/purple_500"
+                        android:text="@string/available_seats"
+                        android:clickable="false"/>
+
+                </com.google.android.material.chip.ChipGroup>
+
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardView_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="6dp"
+            android:layout_marginTop="-9dp"
+            android:layout_marginHorizontal="20dp"
+            android:backgroundTint="#E5D8FB"
+            android:layout_below="@+id/cardView_1"
+            app:cardElevation="4dp"
+            >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/test_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/test_mode"
+                android:textSize="14sp"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="22dp"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/purple_500"
+
+                />
+            <TextView
+                android:id="@+id/online"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/online"
+                android:textSize="13sp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="22dp"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/purple_500"
+
+                />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/test_mode"
+                android:background="#80BB86FC"
+                android:layout_marginHorizontal="18dp" />
+
+            <TextView
+                android:id="@+id/form_fees"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/form_fees"
+                android:textSize="15sp"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="8dp"
+                android:layout_below="@+id/test_mode"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="23dp"
+                android:fontFamily="@font/voces"
+                android:textColor="@color/purple_500"
+
+                />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="4dp"
+                android:layout_below="@+id/form_fees"
+                android:background="#80BB86FC"
+                android:layout_marginHorizontal="18dp" />
+
+            <TextView
+                android:id="@+id/general"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/general"
+                android:textSize="14sp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/form_fees"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="24dp"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/purple_500"
+
+                />
+
+            <TextView
+                android:id="@+id/general_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_750"
+                android:textSize="14sp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/form_fees"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="24dp"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/purple_500"
+
+                />
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="4dp"
+                android:layout_below="@+id/general"
+                android:background="#80BB86FC"
+                android:layout_marginHorizontal="18dp" />
+
+            <TextView
+                android:id="@+id/obc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/general"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="-2dp"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/roboto"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="5dp"
+                android:text="@string/obc"
+                android:textColor="@color/purple_500"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/obc_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/general"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="-2dp"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/roboto"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="5dp"
+                android:text="@string/_150"
+                android:textColor="@color/purple_500"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="4dp"
+                android:layout_below="@+id/obc"
+                android:background="#80BB86FC"
+                android:layout_marginHorizontal="18dp" />
+
+            <TextView
+                android:id="@+id/scst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sc_st"
+                android:textSize="14sp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/obc"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="24dp"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/purple_500"
+                />
+
+            <TextView
+                android:id="@+id/scst_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_80"
+                android:textSize="14sp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/obc"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="24dp"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/purple_500"
+                />
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="4dp"
+                android:layout_below="@+id/scst"
+                android:background="#80BB86FC"
+                android:layout_marginHorizontal="18dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/apply_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider5"
+                android:layout_alignEnd="@+id/divider5"
+                android:backgroundTint="#D3A8ED"
+                android:text="@string/apply_now"
+                android:textColor="@color/purple_500"
+                android:layout_marginVertical="16dp"
+                style="?attr/materialButtonOutlinedStyle"
+                />
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+</ScrollView>

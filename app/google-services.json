@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "724606950690",
+    "firebase_url": "https://exam-registration-7b069-default-rtdb.firebaseio.com",
+    "project_id": "exam-registration-7b069",
+    "storage_bucket": "exam-registration-7b069.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:724606950690:android:52ec168f2120194a3d197b",
+        "android_client_info": {
+          "package_name": "com.example.examregistration"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "724606950690-i8adanpd73ulum6ivbddfq90n9sutiko.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.examregistration",
+            "certificate_hash": "43cdf41cc33f3228cd7c2cf2f1a2d60422442393"
+          }
+        },
+        {
+          "client_id": "724606950690-82arkvsrgg1588f9kecftd1ehbklp32v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYi66mzJLr1-8-8kIl6Vr9tdjw5ywdibg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "724606950690-82arkvsrgg1588f9kecftd1ehbklp32v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

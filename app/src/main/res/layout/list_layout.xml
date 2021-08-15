@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/list_image"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:adjustViewBounds="true"
+        android:background="#FCFCFD"
+        android:elevation="2dp"
+        android:padding="4dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/candidate_image" />
+    <TextView
+        android:id="@+id/appno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Application Number : "
+        android:layout_toEndOf="@+id/list_image"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textColor="#19288C"/>
+    <TextView
+        android:id="@+id/list_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appno"
+        android:layout_toEndOf="@+id/list_image"
+        android:text="XXXXXXXXXXXXXX"
+        android:textSize="16sp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="6dp" />
+
+    <TextView
+        android:id="@+id/cann"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Candidate Name : "
+        android:layout_below="@+id/list_name"
+        android:layout_toEndOf="@+id/list_image"
+        android:layout_marginTop="2dp"
+        android:textSize="18sp"
+        android:textColor="#19288C"/>
+    <TextView
+        android:id="@+id/list_can_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cann"
+        android:layout_toEndOf="@+id/list_image"
+        android:text="Candidate Name"
+        android:textSize="16sp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="12dp"/>
+    <TextView
+        android:id="@+id/canm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Candidate email : "
+        android:layout_below="@+id/list_can_name"
+        android:layout_toEndOf="@+id/list_image"
+        android:layout_marginTop="2dp"
+        android:textSize="18sp"
+        android:textColor="#19288C"/>
+    <TextView
+        android:id="@+id/list_can_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/canm"
+        android:layout_toEndOf="@+id/list_image"
+        android:text="Candidate Mail"
+        android:textSize="16sp"
+        android:layout_marginTop="2dp"/>
+    <TextView
+        android:id="@+id/uid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible" />
+</RelativeLayout>

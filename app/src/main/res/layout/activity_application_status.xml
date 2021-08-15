@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/motionL"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_application_status_scene"
+    tools:context=".ApplicationStatus">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="173dp"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#F5ECFF"
+        android:elevation="8dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="6dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="40dp"
+                android:scaleX="1.3"
+                android:scaleY="1.3"
+                android:src="@drawable/exam_info" />
+
+            <TextView
+                android:id="@+id/exam_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="12dp"
+                android:paddingStart="46dp"
+                android:paddingEnd="35dp"
+                android:text="@string/some_private_exam_2021"
+                android:textColor="#6200EE"
+                android:textSize="28sp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/arrow_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="6dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="36dp"
+                android:src="@drawable/arrow_down"
+                android:visibility="invisible"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/arrow_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="6dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="36dp"
+                android:src="@drawable/arrow_up"
+                android:visibility="invisible" />
+
+            <RelativeLayout
+                android:id="@+id/linearL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_below="@+id/exam_heading">
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="22dp"
+                    android:paddingVertical="13dp"
+                    android:text=" Status :   "
+                    android:textColor="@color/purple_500"
+                    android:textSize="16dp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="22dp"
+                    android:layout_toEndOf="@id/status"
+                    android:paddingVertical="5dp">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginEnd="26dp"
+                        android:backgroundTint="#C8E6C9"
+                        android:elevation="4dp"
+                        android:clickable="false"
+                        android:text="VERIFIED"
+                        android:textColor="#004D40"
+                        android:visibility="gone"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:backgroundTint="#F1C6FD"
+                        android:elevation="4dp"
+                        android:saveEnabled="true"
+                        android:clickable="false"
+                        android:text="ENROLLED"
+                        android:textColor="@color/purple_500"
+                        android:textSize="12sp" />
+
+                </com.google.android.material.chip.ChipGroup>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearL"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="40dp"
+                android:text="Download Hall Ticket"
+                android:textColor="@color/purple_500"
+                android:textSize="22sp"
+                android:visibility="gone"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/downloadBtn"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="57dp"
+                android:layout_height="44dp"
+                android:layout_below="@id/linearL"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="34dp"
+                android:elevation="8dp"
+                app:backgroundTint="#F1BEFF"
+                app:cornerRadius="12dp"
+                app:icon="@drawable/download"
+                app:iconTint="@color/purple_700"
+                app:strokeColor="@color/purple_200"
+                android:visibility="gone"/>
+
+            <androidx.core.widget.ContentLoadingProgressBar
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

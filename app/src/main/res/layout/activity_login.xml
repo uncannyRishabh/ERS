@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5600E8"
+    android:orientation="vertical"
+    app:layoutDescription="@xml/activity_login_scene"
+    tools:context=".LoginActivity">
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/LoginImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/activity_login_xml_loginimage_scene"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/LImage"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:layout_marginBottom="0dp"
+            android:contentDescription="@string/splash"
+            android:src="@drawable/ic_splash"
+            android:transitionName="splash_logo_transition"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+
+    <TextView
+        android:id="@+id/splsh_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="54dp"
+        android:fontFamily="@font/signika_negative"
+        android:text="@string/exam_registration"
+        android:textColor="#86F2F6"
+        android:textSize="36sp"
+        android:layout_marginVertical="58dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <RelativeLayout
+        android:id="@+id/relativeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/continue_with"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/signika_negative"
+            android:gravity="bottom"
+            android:text="@string/continue_with"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:transitionName="splash_text_transition"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/google_SignIn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/continue_with"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="6dp"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/roboto"
+            android:paddingStart="14dp"
+            android:paddingEnd="40dp"
+            android:text="@string/google"
+            android:textColor="#5600E8"
+            android:textSize="18sp"
+            app:cornerRadius="12dp"
+            app:icon="@drawable/google_icon"
+            app:iconGravity="textStart"
+            app:iconSize="32dp"
+            app:iconTint="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/continue_with" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/email_signin"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/google_SignIn"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/roboto"
+            android:foregroundGravity="left|center|center_horizontal"
+            android:paddingStart="14dp"
+            android:paddingEnd="40dp"
+            android:text="@string/e_mail"
+            android:textColor="#5600E8"
+            android:textSize="18sp"
+            android:transitionName="email_button_transition"
+            app:cornerRadius="12dp"
+            app:icon="@drawable/email_icon"
+            app:iconGravity="textStart"
+            app:iconPadding="18dp"
+            app:iconSize="33dp"
+            app:iconTint="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/google_SignIn" />
+
+        <LinearLayout
+            android:id="@+id/paddingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/email_signin"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

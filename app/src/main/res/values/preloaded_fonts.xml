@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/average_sans</item>
+        <item>@font/sarala</item>
+        <item>@font/signika_negative</item>
+        <item>@font/signika_negative_semibold</item>
+        <item>@font/viga</item>
+        <item>@font/voces</item>
+        <item>@font/yantramanav</item>
+    </array>
+</resources>

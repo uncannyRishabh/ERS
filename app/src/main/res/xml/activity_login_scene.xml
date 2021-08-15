@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:autoTransition="animateToEnd"
+        motion:duration="1500">
+       <KeyFrameSet>
+           <KeyAttribute
+               motion:motionTarget="@+id/splsh_Text"
+               motion:framePosition="75"
+               android:alpha="0.2" />
+           <KeyAttribute
+               motion:motionTarget="@+id/relativeBtn"
+               motion:framePosition="70"
+               android:alpha="0.0" />
+           <KeyAttribute
+               motion:motionTarget="@+id/LoginImage"
+               motion:framePosition="100"
+               android:translationY="-55dp" />
+           <KeyAttribute
+               motion:motionTarget="@+id/LoginImage"
+               motion:framePosition="30"
+               android:translationY="0dp" />
+           <KeyAttribute
+               motion:motionTarget="@+id/splsh_Text"
+               motion:framePosition="50"
+               android:translationY="-30dp" />
+           <KeyAttribute
+               motion:motionTarget="@+id/LoginImage"
+               motion:framePosition="40"
+               android:scaleX=".85" />
+           <KeyAttribute
+               motion:motionTarget="@+id/LoginImage"
+               motion:framePosition="40"
+               android:scaleY=".85" />
+       </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/relativeBtn"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:visibility="invisible" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/splsh_Text"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="58dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/LoginImage"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/LImage"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="0dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+    </ConstraintSet>
+</MotionScene>

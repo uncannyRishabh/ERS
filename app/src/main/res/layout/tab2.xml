@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.PlaceholderFragment"
+    >
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <RelativeLayout
+            android:id="@+id/relLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/Upload_Scanned_Docs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:layout_constraintLeft_creator="1"
+                tools:layout_constraintTop_creator="1"
+                android:text="Upload Documents"
+                android:textSize="28sp"
+                android:textColor="@color/purple_700"
+                android:layout_marginHorizontal="20dp"
+                android:paddingVertical="6dp"
+                android:layout_marginTop="6dp"
+                />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="#A382FF"
+                android:layout_below="@+id/Upload_Scanned_Docs"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/upload_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload Image"
+                android:layout_below="@+id/divider1"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="16dp"
+                android:textSize="20sp"
+                android:gravity="bottom"
+                android:paddingVertical="10dp"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/upload_image"
+                android:layout_marginStart="20dp"
+                android:text="Document Format : jpg\nmin size : 10KB\nmax size : 50KB"
+                android:textSize="14sp"
+                />
+
+            <ImageView
+                android:id="@+id/upload_image_icon"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:padding="64dp"
+                android:src="@drawable/add_image"
+                android:layout_below="@id/divider1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginHorizontal="20dp"
+                android:focusable="true"
+                android:clickable="true"
+                />
+
+            <ProgressBar
+                android:id="@+id/Image_progress"
+                android:layout_width="180dp"
+                android:layout_height="10dp"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_below="@+id/divider1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="19dp" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/divider6"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_below="@id/upload_image_icon"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/document_type"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                android:layout_marginVertical="8dp"
+                android:layout_marginHorizontal="20dp"
+                app:startIconDrawable="@drawable/upload_docs"
+                app:startIconCheckable="true"
+                android:hint="Select Document Type"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_below="@id/divider6"
+
+                >
+                <AutoCompleteTextView
+                    android:id="@+id/doc_type_dropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.github.barteksc.pdfviewer.PDFView
+                android:id="@+id/pdfPre"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_below="@+id/document_type"
+                android:visibility="gone"
+            />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submit"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="22dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="28dp"
+                android:backgroundTint="#00000000"
+                android:paddingVertical="10dp"
+                android:layout_below="@id/pdfPre"
+                android:text="SUBMIT"
+                android:textColor="@color/purple_500"
+                android:textSize="18sp"
+                app:strokeColor="@color/purple_200"
+                app:strokeWidth="2dp" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

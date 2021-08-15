@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.examregistration">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:remove="android:maxSdkVersion"/>
+
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ExamRegistration">
+
+        <activity android:name=".AdminVerify"
+            android:theme="@style/navbarColor_ActionBar"/>
+
+        <activity android:name=".AdminActivity"
+            android:theme="@style/navbarColor_ActionBar"/>
+
+        <activity android:name=".AdminLogin"
+            android:theme="@style/navbarColor_ActionBar"
+            />
+
+        <activity android:name=".editProfile" />
+        <activity
+            android:name=".ApplicationStatus"
+            android:parentActivityName=".dashboardActivity" />
+        <activity android:name=".PaymentActivity" />
+        <activity
+            android:name=".formActivity"
+            android:label="@string/title_activity_form"
+            android:theme="@style/Theme.ExamRegistration.NoActionBar" />
+        <activity
+            android:name=".forgotPasswordActivity"
+            android:parentActivityName=".SignInActivity"
+            android:theme="@style/navbarColor_ActionBar"/>
+        <activity
+            android:name=".enrollActivity"
+            android:parentActivityName=".dashboardActivity" />
+        <activity android:name=".dashboardActivity" />
+        <activity
+            android:name=".RegisterActivity"
+            android:parentActivityName=".LoginActivity"
+            android:theme="@style/navbarColor_ActionBar"/>
+        <activity
+            android:name=".SignInActivity"
+            android:parentActivityName=".LoginActivity"
+            android:theme="@style/navbarColor_ActionBar"/>
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

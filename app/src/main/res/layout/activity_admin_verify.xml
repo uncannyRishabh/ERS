@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminVerify">
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+        <LinearLayout
+            android:id="@+id/acceptBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:background="#388e3c"
+            android:clickable="true"
+            android:focusable="true"
+            android:elevation="3dp"
+            >
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/accept"
+                android:backgroundTint="#388e3c"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:clickable="false"
+                />
+            <TextView
+                android:id="@+id/accept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ACCEPT"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/declineBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:background="#c41c00"
+            android:clickable="true"
+            android:focusable="true"
+            android:elevation="3dp"
+            >
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/reject"
+                android:backgroundTint="#c41c00"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:clickable="false"
+                />
+            <TextView
+                android:id="@+id/reject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DECLINE"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout1"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:orientation="vertical"
+            android:background="#FBFCFF"
+            >
+            <ImageView
+                android:id="@+id/canImage"
+                android:layout_width="190dp"
+                android:layout_height="190dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="12dp"
+                android:background="#F7F6FA"
+                android:elevation="2dp"
+                android:padding="3dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:paddingHorizontal="2dp"
+                android:paddingVertical="2dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tview1"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="18dp"
+                android:text="Candidate Name "
+                android:textColor="#2C00EE"
+                android:textSize="20sp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/canImage"
+                />
+
+            <TextView
+                android:id="@+id/canName"
+                android:layout_width="188dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_below="@id/tview1"
+                android:layout_alignParentEnd="true"
+
+                android:text="NAME"
+                android:textColor="#191919"
+                android:textSize="18sp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@id/canImage"
+                android:paddingHorizontal="6dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="8dp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="8dp"
+                    >
+                    <TextView
+                        android:id="@+id/fname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Father's Name : "
+                        android:textSize="18sp"
+
+                        />
+                    <TextView
+                        android:id="@+id/mname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mother's Name : "
+                        android:textSize="18sp"
+                        android:layout_below="@id/fname"
+                        />
+                    <TextView
+                        android:id="@+id/dateofbirth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Date of  Birth : "
+                        android:textSize="18sp"
+                        android:layout_below="@id/mname"
+                        />
+                    <TextView
+                        android:id="@+id/gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Gender : "
+                        android:textSize="18sp"
+                        android:layout_below="@id/dateofbirth"
+                        />
+                    <TextView
+                        android:id="@+id/residentialaddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Current address : "
+                        android:textSize="18sp"
+                        android:layout_below="@id/gender"
+                        />
+                    <TextView
+                        android:id="@+id/phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Phone number : "
+                        android:textSize="18sp"
+                        android:layout_below="@id/residentialaddress"
+                        />
+                    <TextView
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mail address : "
+                        android:textSize="18sp"
+                        android:layout_below="@id/phone"
+                        />
+                </RelativeLayout>
+
+            </ScrollView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="#FBFCFF"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tview2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="Document Type : "
+                android:textColor="#0004EE"
+                android:textSize="23sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.github.barteksc.pdfviewer.PDFView
+                android:id="@+id/can_pdf"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:layout_below="@id/tview2"
+                android:background="#F6F6FA"
+                android:elevation="2dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
